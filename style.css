@@ -1,0 +1,209 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:wght@100;300;400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+:root {
+  font-family: "Josefin Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+body {
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  border-top: 0;
+  padding: 12px 17px;
+  background: #fff;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 769px) {
+  .header {
+    padding: 20px 40px;
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  -webkit-box-flex: 0 1 160px;
+  -ms-flex: 0 1 160px;
+  flex: 0 1 160px;
+}
+@media only screen and (min-width: 769px) {
+  .header__logo {
+    -webkit-box-flex: 0 0 280px;
+    -ms-flex: 0 0 280px;
+    flex: 0 0 280px;
+  }
+}
+.header__img-logo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.order-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.order-success__svg-wrapper {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.order-success__svg {
+  width: 80px;
+  height: 80px;
+  min-width: 100%;
+  min-height: auto;
+}
+
+.order-success__heading {
+  font-size: 30px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.order-success__heading-cust-name {
+  font-weight: 600;
+}
+.order-success__subheading {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  letter-spacing: normal;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-success__msg {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.2;
+}
+
+.order-success__link {
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #011c49, #00b67b);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.order-success__link:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-success {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .order-success__svg-wrapper,
+  .order-success__svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* styles for order details */
+.order-deatils__label {
+  color: #333;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.order-deatils__value {
+  color: #545454;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.order-details {
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  background: #fff;
+  background-clip: padding-box;
+  border-radius: 5px;
+  color: #545454;
+  font-family: Helvetica Neue, sans-serif;
+  line-height: 1.3em;
+  padding: 1.1em;
+  max-width: 600px;
+  margin: 40px auto 50px;
+}
+@media (max-width: 768px) {
+  .order-details {
+    margin: 20px auto 30px;
+    width: 90%;
+  }
+}
+.order-details > * {
+  font-family: inherit;
+}
+.order-details.visible {
+  visibility: visible;
+  max-height: 1000px;
+  overflow: visible;
+  opacity: 1;
+}
+.order-details__heading {
+  font-size: 18px;
+}
+.order-details__content-box {
+  padding-top: 16px;
+}
+.order-details__info-box-inner:not(:last-child) {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#011c49" />
+  <!-- CONTENT: Change page title from here -->
+  <title>Thank you - Order Successful</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script>
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get("session_id");
+
+      if (!sessionId) {
+        window.location.replace("https://lucernekammere.com/");
+        return;
+      }
+
+      // Additional code to handle sessionId can go here
+    })();
+  </script>
+  <!-- CONTENT: Change Facebook Pixel Code from here -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '536006748934294');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=536006748934294&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header__logo">
+      <a href="https://lucernekammere.com/">
+        <img src="logo.png" alt="Logo" class="header__img-logo">
+      </a>
+    </div>
+  </div>
+  <div>
+    <div class="order-success">
+      <div class="order-success__svg-wrapper">
+        <svg viewBox="0 0 512 512" class="order-success__svg">
+          <g>
+            <linearGradient id="a" x1="86.294" x2="425.706" y1="425.706" y2="86.294" gradientUnits="userSpaceOnUse">
+              <stop stop-opacity="1" stop-color="#011c49" offset="0"></stop>
+              <stop stop-opacity="1" stop-color="#00b67b" offset="1"></stop>
+            </linearGradient>
+            <path fill="url(#a)" fill-rule="evenodd"
+              d="M256 16c132.549 0 240 107.451 240 240S388.548 496 256 496 16 388.549 16 256 123.451 16 256 16zm29.165 319.79 19.806 18.189a6.944 6.944 0 0 0 9.684-.272l35.348-33.84a6.938 6.938 0 0 0 .185-9.809 6.938 6.938 0 0 0-9.809-.191L309.58 339.36l-15.015-13.788c-2.822-2.594-7.216-2.411-9.806.409a6.94 6.94 0 0 0 .406 9.809zm-51.767-221.869h-3.929c-11.552.504-22.003 5.429-29.688 13.115-8.116 8.118-13.158 19.324-13.158 31.652v22.073h12.387v-22.073c0-8.912 3.651-17.017 9.528-22.896 5.885-5.88 13.987-9.531 22.896-9.531 8.915 0 17.017 3.652 22.894 9.531 5.885 5.879 9.536 13.984 9.536 22.896v22.073h12.381v-22.073c0-12.329-5.037-23.534-13.158-31.652-7.688-7.686-18.137-12.611-29.689-13.115zm84.129 151.741c-36.564 0-66.207 29.643-66.207 66.207 0 36.567 29.643 66.21 66.207 66.21 36.567 0 66.21-29.643 66.21-66.21 0-36.564-29.643-66.207-66.21-66.207zm-167.032-83.881a7.719 7.719 0 0 0-7.709 7.033l-14.451 157.228c-.406 4.401.916 8.342 3.894 11.603 2.975 3.264 6.777 4.944 11.2 4.944h100.082c-3.929-9.463-6.103-19.837-6.103-30.72 0-44.249 35.869-80.118 80.118-80.118 2.833 0 5.626.147 8.386.436l-5.825-63.374a7.724 7.724 0 0 0-7.71-7.033h-36.133v19.621a6.191 6.191 0 1 1-12.381 0V181.78H199.01v19.621c0 3.42-2.771 6.193-6.191 6.193s-6.196-2.773-6.196-6.193V181.78h-36.128z"
+              clip-rule="evenodd" opacity="1" data-original="url(#a)"></path>
+          </g>
+        </svg>
+      </div>
+      <h2 class="order-success__heading">Danke<span class="order-success__heading-cust-name"
+          id="order-success-customer-name"></span>!</h2>
+      <h3 class="order-success__subheading">Ihre Bestellung ist bestätigt</h3>
+      <p class="order-success__msg">Sie erhalten eine E-Mail, sobald Ihre Bestellung fertig ist.</p>
+      <a class="order-success__link" href="https://lucernekammere.com/" class="button">Zurück zur Startseite</a>
+    </div>
+
+
+    <div id="order-details-container" class="order-details">
+      <h2 class="order-details__heading order-deatils__label">
+        Bestelldetails
+      </h2>
+      <div class="order-details__content-box">
+        <div class="order-details__info-box-inner">
+          <h3 class="order-details__contact-info-label order-deatils__label">Kontaktinformationen</h3>
+          <div id="order-details-email" class="order-details__email order-deatils__value"></div>
+          <div id="order-details-name" class="order-details__name order-deatils__value"></div>
+        </div>
+        <div class="order-details__info-box-inner">
+          <h3 class="order-details__address-info-label order-deatils__label">Lieferadresse</h3>
+          <div id="order-details-line-1" class="order-details__line-1 order-deatils__value"></div>
+          <div id="order-details-line-2" class="order-details__line-2 order-deatils__value"></div>
+          <div id="order-details-city-postal" class="order-details__city-postal order-deatils__value"></div>
+          <div id="order-details-country" class="order-details__country order-deatils__value"></div>
+        </div>
+        <div class="order-details__info-box-inner">
+          <h3 class="order-details__payment-info-label order-deatils__label">Zahlungsdetails</h3>
+          <div id="order-details-amount-currency" class="order-details__amount-currency order-deatils__value"></div>
+          <div id="order-details-payment-status" class="order-details__payment-status order-deatils__value"></div>
+        </div>
+        <div class="order-details__info-box-inner">
+          <h3 class="order-details__shipping-info-label order-deatils__label">Versandart</h3>
+          <div id="order-details-shipping" class="order-details__shipping order-deatils__value">KOSTENLOS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
